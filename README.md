@@ -4,21 +4,21 @@ Static assets hosted on Cloudflare Pages.
 
 ## Structure
 ```
-├── index.html        # Infrastructure landing page
-└── public/
-    ├── bitmacro.png  # Logo used across ecosystem
-    └── icons/
-        ├── bitcoin.png
-        ├── bitmacro.png
-        ├── facebook.png
-        ├── instagram.png
-        ├── lightning.png
-        ├── linkedin.png
-        ├── nostr.png
-        ├── telegram.png
-        ├── whatsapp.png
-        ├── x.png
-        └── youtube.png
+public/
+  ├── index.html      # Infrastructure landing page
+  ├── bitmacro.png    # Logo used across ecosystem
+  └── icons/
+      ├── bitcoin.png
+      ├── bitmacro.png
+      ├── facebook.png
+      ├── instagram.png
+      ├── lightning.png
+      ├── linkedin.png
+      ├── nostr.png
+      ├── telegram.png
+      ├── whatsapp.png
+      ├── x.png
+      └── youtube.png
 ```
 
 ## URLs
@@ -28,10 +28,10 @@ Static assets hosted on Cloudflare Pages.
   - Infrastructure landing page with service links and status
 
 ### Logo
-- Production: https://cdn.bitmacro.cloud/public/bitmacro.png
+- Production: https://cdn.bitmacro.cloud/bitmacro.png
 
 ### Icons
-- Production: https://cdn.bitmacro.cloud/public/icons/{icon-name}.png
+- Production: https://cdn.bitmacro.cloud/icons/{icon-name}.png
   - Examples:
-    - https://cdn.bitmacro.cloud/public/icons/bitcoin.png
-    - https://cdn.bitmacro.cloud/public/icons/bitmacro.png
+    - https://cdn.bitmacro.cloud/icons/bitcoin.png
+    - https://cdn.bitmacro.cloud/icons/bitmacro.png
