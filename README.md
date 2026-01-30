@@ -4,21 +4,21 @@ Static assets hosted on Cloudflare Pages.
 
 ## Structure
 ```
-public/
-  ├── index.html      # Infrastructure landing page
-  ├── bitmacro.png    # Logo used across ecosystem
-  └── icons/
-      ├── bitcoin.png
-      ├── bitmacro.png
-      ├── facebook.png
-      ├── instagram.png
-      ├── lightning.png
-      ├── linkedin.png
-      ├── nostr.png
-      ├── telegram.png
-      ├── whatsapp.png
-      ├── x.png
-      └── youtube.png
+├── index.html        # Infrastructure landing page
+└── public/
+    ├── bitmacro.png  # Logo used across ecosystem
+    └── icons/
+        ├── bitcoin.png
+        ├── bitmacro.png
+        ├── facebook.png
+        ├── instagram.png
+        ├── lightning.png
+        ├── linkedin.png
+        ├── nostr.png
+        ├── telegram.png
+        ├── whatsapp.png
+        ├── x.png
+        └── youtube.png
 ```
 
 ## URLs
