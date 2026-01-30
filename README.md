@@ -5,6 +5,7 @@ Static assets hosted on Cloudflare Pages.
 ## Structure
 ```
 public/
+  ├── index.html      # Infrastructure landing page
   ├── bitmacro.png    # Logo used across ecosystem
   └── icons/
       ├── bitcoin.png
@@ -21,6 +22,10 @@ public/
 ```
 
 ## URLs
+
+### Landing Page
+- Production: https://cdn.bitmacro.cloud/index.html
+  - Infrastructure landing page with service links and status
 
 ### Logo
 - Production: https://cdn.bitmacro.cloud/public/bitmacro.png
