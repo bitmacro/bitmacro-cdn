@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BitMacro Infrastructure</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background: linear-gradient(135deg, #0f0c29, #302b63, #24243e); color: #00ff41; font-family: 'Courier New', monospace; min-height: 100vh; display: flex; justify-content: center; align-items: center; padding: 20px; }
+        .container { max-width: 900px; width: 100%; text-align: center; }
+        .ascii-art { background: rgba(0, 0, 0, 0.4); border: 2px solid #00ff41; border-radius: 10px; padding: 30px 20px; margin-bottom: 40px; box-shadow: 0 0 20px rgba(0, 255, 65, 0.3); }
+        pre { color: #0066ff; font-size: 10px; line-height: 1.2; overflow-x: auto; text-align: left; display: inline-block; }
+        .subtitle { color: #ffa500; font-size: 14px; margin-top: 15px; letter-spacing: 3px; animation: pulse 2s ease-in-out infinite; }
+        @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.6; } }
+        .services { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-bottom: 40px; }
+        .service-card { background: rgba(0, 0, 0, 0.6); border: 2px solid #00ff41; border-radius: 8px; padding: 20px; text-decoration: none; color: #00ff41; transition: all 0.3s ease; position: relative; overflow: hidden; }
+        .service-card::before { content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%; background: linear-gradient(90deg, transparent, rgba(0, 255, 65, 0.2), transparent); transition: left 0.5s; }
+        .service-card:hover::before { left: 100%; }
+        .service-card:hover { transform: translateY(-5px); box-shadow: 0 10px 30px rgba(0, 255, 65, 0.4); border-color: #ffa500; }
+        .service-icon { font-size: 32px; margin-bottom: 10px; }
+        .service-name { font-size: 16px; font-weight: bold; margin-bottom: 5px; color: #ffa500; }
+        .service-desc { font-size: 11px; color: #00ff41; opacity: 0.8; }
+        .status-bar { background: rgba(0, 0, 0, 0.6); border: 1px solid #00ff41; border-radius: 5px; padding: 15px; display: flex; justify-content: space-around; align-items: center; flex-wrap: wrap; gap: 15px; }
+        .status-item { display: flex; align-items: center; gap: 8px; }
+        .status-dot { width: 10px; height: 10px; border-radius: 50%; background: #00ff41; animation: blink 2s ease-in-out infinite; }
+        @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
+        .status-text { font-size: 12px; color: #00ff41; }
+        .footer { margin-top: 30px; font-size: 11px; color: #666; }
+        .footer a { color: #ffa500; text-decoration: none; }
+        @media (max-width: 768px) { pre { font-size: 6px; } .subtitle { font-size: 10px; } .services { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="ascii-art">
+            <pre>
+╔══════════════════════════════════════════════════════════════════════════╗
+║                                                                          ║
+║      ██████╗ ██╗████████╗███╗   ███╗ █████╗  ██████╗ ██████╗  ██████╗    ║
+║      ██╔══██╗██║╚══██╔══╝████╗ ████║██╔══██╗██╔════╝ ██╔══██╗██╔═══██╗   ║
+║      ██████╔╝██║   ██║   ██╔████╔██║███████║██║      ██████╔╝██║   ██║   ║
+║      ██╔══██╗██║   ██║   ██║╚██╔╝██║██╔══██║██║      ██╔══██╗██║   ██║   ║
+║      ██████╔╝██║   ██║   ██║ ╚═╝ ██║██║  ██║╚██████╗ ██║  ██║╚██████╔╝   ║
+║      ╚═════╝ ╚═╝   ╚═╝   ╚═╝     ╚═╝╚═╝  ╚═╝ ╚═════╝ ╚═╝  ╚═╝ ╚═════╝    ║
+║                                                                          ║
+║        ⚡  L I G H T N I N G   S E R V I C E   P R O V I D E R  ⚡      ║
+║                                                                          ║
+╚══════════════════════════════════════════════════════════════════════════╝
+            </pre>
+            <div class="subtitle">S O V E R E I G N  ·  I N F R A S T R U C T U R E</div>
+        </div>
+
+        <div class="services">
+            <a href="https://pay.bitmacro.io" class="service-card">
+                <div class="service-icon">⚡</div>
+                <div class="service-name">PAY</div>
+                <div class="service-desc">Lightning Payments</div>
+            </a>
+
+            <a href="https://relay.bitmacro.io" class="service-card">
+                <div class="service-icon">📡</div>
+                <div class="service-name">RELAY</div>
+                <div class="service-desc">Nostr Protocol</div>
+            </a>
+
+            <a href="https://status.bitmacro.io" class="service-card">
+                <div class="service-icon">📊</div>
+                <div class="service-name">STATUS</div>
+                <div class="service-desc">Infrastructure Monitor</div>
+            </a>
+
+            <a href="https://bio.bitmacro.io" class="service-card">
+                <div class="service-icon">🔗</div>
+                <div class="service-name">BIO</div>
+                <div class="service-desc">Link Hub</div>
+            </a>
+        </div>
+
+        <div class="status-bar">
+            <div class="status-item">
+                <div class="status-dot"></div>
+                <div class="status-text">VPS: ONLINE</div>
+            </div>
+            <div class="status-item">
+                <div class="status-dot"></div>
+                <div class="status-text">WIREGUARD: ACTIVE</div>
+            </div>
+            <div class="status-item">
+                <div class="status-dot"></div>
+                <div class="status-text">SELF-HOSTED: CONNECTED</div>
+            </div>
+            <div class="status-item">
+                <div class="status-dot"></div>
+                <div class="status-text">BITCOIN NODE: SYNCED</div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>BitMacro Infrastructure</p>
+            <p><a href="https://bitmacro.io">bitmacro.io</a> · Lightning Address: <strong>oficial@bitmacro.io</strong></p>
+        </div>
+    </div>
+</body>
+</html>
